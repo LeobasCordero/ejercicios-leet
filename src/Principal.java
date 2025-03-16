@@ -2,10 +2,7 @@
 import com.leobas.aleatorios.Aleatorios;
 import com.leobas.constantes.Constantes;
 import com.leobas.impresion.Impresion;
-import com.leocg.easy.DuplicateZeros;
-import com.leocg.easy.FriendshipList;
-import com.leocg.easy.SquaredSortedArray;
-import com.leocg.easy.TwoSum;
+import com.leocg.easy.*;
 import com.leocg.hard.MedianTwoSortedArrays;
 import com.leocg.medium.AddTwoNumbers;
 import com.leocg.medium.LongestPalindrome;
@@ -110,5 +107,41 @@ public class Principal {
         int[] inputDup = {1,0,2,3,0,4,5,0};
         duplicateZeros.duplicateZeros(inputDup);
 
+        RemoveElement removeElement = new RemoveElement();
+        int[] intArray = {3,2,2,3};
+        int val = 3;
+        removeElement.removeElement(intArray, val);
+
+        RemoveDuplicatesSortedArray removeDuplicatesSortedArray = new RemoveDuplicatesSortedArray();
+        int[] orderedArray ={0,0,1,1,1,2,2,3,3,4};
+        //int[] orderedArray ={1,1,1};
+        //int[] orderedArray ={1,1,1,2};
+        //int[] orderedArray ={1,2,2};
+        //int[] orderedArray ={1,1};
+        int resultOrderedArray = removeDuplicatesSortedArray.removeDuplicates(orderedArray);
+        Impresion.impresionNormal(resultOrderedArray);
+
+        CheckNDoubleExist checkNDoubleExist = new CheckNDoubleExist();
+        int[] arrayInput = {10,2,5,3};
+        Impresion.impresionNormal(checkNDoubleExist.checkIfExist(arrayInput));
+
+
+        ValidMountainArray validMountainArray = new ValidMountainArray();
+        //int[] arrMountain = {2,1}; //false
+        //int[] arrMountain = {3,5,5}; //false
+        //int[] arrMountain = {0,3,2,1}; //true
+        //int[] arrMountain = {0,2,3,4,5,2,1,0}; //true
+        //int[] arrMountain = {0,1,2,3,4,8,9,10,11,12,11}; //true
+        int[] arrMountain = {0,1,2,3,4,5,6,7,8,9}; //false
+        Impresion.impresionNormal(validMountainArray.validMountainArray(arrMountain));
+
+        ReplaceGreatestElementRightSide replaceGreatestElementRightSide = new ReplaceGreatestElementRightSide();
+        int[] arrGreatest = {17,18,5,4,6,1};
+        //int[] arrGreatest = {17,1};
+        Impresion.imprimirLista(replaceGreatestElementRightSide.replaceElements(arrGreatest));
+
+        MoveZeroes moveZeroes = new MoveZeroes();
+        int[] arrZeros = {0,1,0,3,12};
+        moveZeroes.moveZeroes(arrZeros);
     }
 }
