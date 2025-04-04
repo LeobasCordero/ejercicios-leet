@@ -1,6 +1,8 @@
 package com.leocg.easy;
 
 
+import static com.leocg.utils.Utils.imprimirTitulo;
+
 /**
  * Given an array of integers arr, return true if and only if it is a valid mountain array.
  *
@@ -36,6 +38,7 @@ package com.leocg.easy;
 public class ValidMountainArray {
 
     public boolean validMountainArray(int[] arr) {
+        imprimirTitulo("Valid Mountain Array");
 
         if(arr == null || arr.length < 3){
             return false;

@@ -9,6 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static com.leocg.utils.Utils.imprimirTitulo;
+
 
 public class FriendshipList {
 
@@ -34,6 +36,7 @@ public class FriendshipList {
      */
 
     public void solution(String[] employee_list, String[] friendship_list){
+        imprimirTitulo("Friendship List");
         // Crear un mapa para almacenar las relaciones por ID de empleado
         Map<Integer, List<Integer>> relaciones = new HashMap<>();
 

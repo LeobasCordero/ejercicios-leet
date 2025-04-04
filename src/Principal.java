@@ -1,10 +1,12 @@
 
 import com.leobas.aleatorios.Aleatorios;
-import com.leobas.constantes.Constantes;
+import com.leobas.generacion.GeneracionNodos;
 import com.leobas.impresion.Impresion;
 import com.leocg.easy.*;
 import com.leocg.hard.MedianTwoSortedArrays;
 import com.leocg.medium.AddTwoNumbers;
+import com.leocg.medium.ContainerWithMostWater;
+import com.leocg.easy.LongestCommonPrefix;
 import com.leocg.medium.LongestPalindrome;
 import com.leobas.objects.ListNode;
 import com.leocg.objects.Pin;
@@ -125,7 +127,6 @@ public class Principal {
         int[] arrayInput = {10,2,5,3};
         Impresion.impresionNormal(checkNDoubleExist.checkIfExist(arrayInput));
 
-
         ValidMountainArray validMountainArray = new ValidMountainArray();
         //int[] arrMountain = {2,1}; //false
         //int[] arrMountain = {3,5,5}; //false
@@ -143,5 +144,85 @@ public class Principal {
         MoveZeroes moveZeroes = new MoveZeroes();
         int[] arrZeros = {0,1,0,3,12};
         moveZeroes.moveZeroes(arrZeros);
+
+        SortArrayByParity sortArrayByParity = new SortArrayByParity();
+        int[] arrParity = {3,1,2,4};
+        sortArrayByParity.sortArrayByParity(arrParity);
+
+        HeightChecker heightChecker = new HeightChecker();
+        //int[] arrHeighChecker = {3,1,2,4};
+        //int[] arrHeighChecker = {1,1,4,2,1,3};
+        int[] arrHeighChecker = {1,2,1,2,1,1,1,2,1};
+        //int[] arrHeighChecker = {5,1,2,3,4};
+        Impresion.impresionNormal("result: " + heightChecker.heightChecker(arrHeighChecker));
+
+        ThirdMaximumNumber thirdMaximumNumber = new ThirdMaximumNumber();
+        int[] numsMax = {1,1,2};
+        //int[] numsMax = {3,1,2,4};
+        Impresion.impresionNormal("result: " + thirdMaximumNumber.thirdMax(numsMax));
+
+        FindAllNumbersDisappearedArray findAllNumbersDisappearedArray = new FindAllNumbersDisappearedArray();
+        //int[] numsMissing = {1,1,2};
+        int[] numsMissing = {4,3,2,7,8,2,3,1};
+        //int[] numsMissing = {1,1};
+        //int[] numsMissing = {1};
+        Impresion.imprimirListaHorizontal(findAllNumbersDisappearedArray.findDisappearedNumbers(numsMissing));
+
+        ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
+        int[] heightArray = {1,8,6,2,5,4,8,3,7};
+        Impresion.impresionNormal(containerWithMostWater.maxArea(heightArray));
+
+        LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
+        //String[] stringArray = {"flower","flow","flight"};
+        //String[] stringArray = {"reflower","flow","flight"};
+        //String[] stringArray = {"acc","aaa","aaba"};
+        //String[] stringArray = {"ab", "a"};
+        String[] stringArray = {"a"};
+        Impresion.impresionNormal(longestCommonPrefix.longestCommonPrefix(stringArray));
+
+        ValidParentheses validParentheses = new ValidParentheses();
+        String stringParenthesis = "([])";
+        //String stringParenthesis = "()[]{}";
+        //String stringParenthesis = ")(){}";
+        //String stringParenthesis = "(]";
+        //String stringParenthesis = "([)]";
+        //String stringParenthesis = "(}{)";
+        //String stringParenthesis = "[])";
+        Impresion.impresionNormal(validParentheses.isValid(stringParenthesis));
+
+        MergeTwoLists mergeTwoLists = new MergeTwoLists();
+        int[] ln1Nums = {}; int[] ln2Nums = {};
+        //int[] ln1Nums = {}; int[] ln2Nums = {0};
+        //int[] ln1Nums = {-6,-5,6,6,7}; int[] ln2Nums = {0};
+        //int[] ln1Nums = {1}; int[] ln2Nums = {};
+        //int[] ln1Nums = {1,2,4}; int[] ln2Nums = {1,3,4};
+        ListNode listNode1 = GeneracionNodos.setListNodes(ln1Nums);
+        ListNode listNode2 = GeneracionNodos.setListNodes(ln2Nums);
+        Impresion.imprimirLista(mergeTwoLists.mergeTwoLists(listNode1, listNode2));
+
+        FindIndexFirstOcurrenceString findIndexFirstOcurrenceString = new FindIndexFirstOcurrenceString();
+        String haystack = "mississippi";String needle = "issip";
+        //
+        // String haystack = "leetcode";String needle = "leeto";
+        //String haystack = "sadbutsad";String needle = "sad";
+        Impresion.impresionNormal(findIndexFirstOcurrenceString.strStr(haystack, needle));
+
+        MaxConsecutiveOnesII maxConsecutiveOnesII = new MaxConsecutiveOnesII();
+        //int[] binaryArray = {1,0,1,1,0};
+        //int[] binaryArray = {1,0,1,1,0,1};
+        //int[] binaryArray = {1,1,0,1};
+        //int[] binaryArray = {1};
+        //int[] binaryArray = {0};
+        int[] binaryArray = {0,1};
+        Impresion.impresionNormal(maxConsecutiveOnesII.findMaxConsecutiveOnes(binaryArray));
+
+        HouseRobber houseRobber = new HouseRobber();
+        int[] robHouses = {1,2,3,1};
+        Impresion.impresionNormal(houseRobber.rob(robHouses));
+
+        MinCostClimbingStairs minCostClimbingStairs = new MinCostClimbingStairs();
+        //int[] minCostArray = {10,15,20};
+        int[] minCostArray = {1,100,1,1,1,100,1,1,100,1};
+        Impresion.impresionNormal(minCostClimbingStairs.minCostClimbingStairs(minCostArray));
     }
 }

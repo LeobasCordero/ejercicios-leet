@@ -5,6 +5,8 @@ package com.leocg.easy;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.leocg.utils.Utils.imprimirTitulo;
+
 /**
  * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
  *
@@ -31,6 +33,7 @@ public class TwoSum {
      */
 
     public int[] twoSum(int[] nums, int target) {
+        imprimirTitulo("Two Sum");
 /*
         int[] result = {0,0};
 

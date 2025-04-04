@@ -1,5 +1,7 @@
 package com.leocg.easy;
 
+import static com.leocg.utils.Utils.imprimirTitulo;
+
 /**
  * Given an array nums of integers, return how many of them contain an even number of digits.
  *
@@ -32,6 +34,7 @@ package com.leocg.easy;
 public class FindEvenNumberDigits {
 
     public int findNumbers(int[] nums) {
+        imprimirTitulo("Find Numbers");
         int evenNums = 0;
         for(int number : nums){
             char[] numChar = String.valueOf(number).toCharArray();

@@ -1,5 +1,7 @@
 package com.leocg.easy;
 
+import static com.leocg.utils.Utils.imprimirTitulo;
+
 /**
  * Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.
  *
@@ -27,6 +29,7 @@ package com.leocg.easy;
 public class DuplicateZeros {
 
     public int[] duplicateZeros(int[] arr) {
+        imprimirTitulo("Duplicate Zeros");
         int[] response = new int[arr.length];
         int i = 0;
         int j = 0;

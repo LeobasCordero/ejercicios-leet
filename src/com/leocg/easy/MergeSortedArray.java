@@ -1,5 +1,7 @@
 package com.leocg.easy;
 
+import static com.leocg.utils.Utils.imprimirTitulo;
+
 /**
  * You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
  *
@@ -44,6 +46,7 @@ package com.leocg.easy;
 public class MergeSortedArray {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
+        imprimirTitulo("Merged Sorted Array");
         int i = m - 1; // Pointer for nums1
         int j = n - 1; // Pointer for nums2
         int k = m + n - 1; // Pointer for the last element in nums1

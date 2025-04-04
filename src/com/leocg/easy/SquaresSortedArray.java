@@ -2,8 +2,6 @@ package com.leocg.easy;
 
 import java.util.Arrays;
 
-import static com.leocg.utils.Utils.imprimirTitulo;
-
 /**
  * Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
  *
@@ -30,9 +28,9 @@ import static com.leocg.utils.Utils.imprimirTitulo;
  *
  * Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
  */
-public class SquaredSortedArray {
+public class SquaresSortedArray {
+
     public int[] sortedSquares(int[] nums) {
-        imprimirTitulo("Sorted Squares");
         int[] sortedSquares = new int[nums.length];
         for(int i = 0; i < nums.length; i++){
             sortedSquares[i] = nums[i]*nums[i];
@@ -41,7 +39,31 @@ public class SquaredSortedArray {
         Arrays.sort(sortedSquares);
 
         return sortedSquares;
+
+        /*
+        int n = nums.length;
+    int[] sortedSquares = new int[n];
+    int left = 0; // Puntero para el inicio del arreglo
+    int right = n - 1; // Puntero para el final del arreglo
+    int index = n - 1; // Índice para llenar el arreglo de resultados
+
+    // Llenar el arreglo de resultados desde el final
+    while (left <= right) {
+        int leftSquare = nums[left] * nums[left];
+        int rightSquare = nums[right] * nums[right];
+
+        // Colocar el cuadrado más grande al final del arreglo de resultados
+        if (leftSquare > rightSquare) {
+            sortedSquares[index] = leftSquare;
+            left++; // Movemos el puntero izquierdo
+        } else {
+            sortedSquares[index] = rightSquare;
+            right--; // Movemos el puntero derecho
+        }
+        index--; // Movemos el índice hacia la izquierda
     }
 
-
+    return sortedSquares;
+         */
+    }
 }
